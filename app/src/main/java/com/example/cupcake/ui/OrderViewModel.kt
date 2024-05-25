@@ -16,6 +16,7 @@
 package com.example.cupcake.ui
 
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavBackStackEntry
 import com.example.cupcake.data.OrderUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -47,7 +48,7 @@ class OrderViewModel : ViewModel() {
     /**
      * Set the quantity [numberCupcakes] of cupcakes for this order's state and update the price
      */
-    fun setQuantity(numberCupcakes: Int) {
+    fun setQuantity(numberCupcakes: NavBackStackEntry) {
         _uiState.update { currentState ->
             currentState.copy(
                 quantity = numberCupcakes,

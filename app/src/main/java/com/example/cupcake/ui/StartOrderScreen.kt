@@ -49,7 +49,8 @@ import com.example.cupcake.ui.theme.CupcakeTheme
 @Composable
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNextButtonClicked: () -> Unit
 ) {
     Column(
         modifier = modifier,
@@ -117,6 +118,9 @@ fun StartOrderPreview() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(dimensionResource(R.dimen.padding_medium))
-        )
+        ) {
+            viewModel.setQuantity(it)
+            navController.navigate(com.example.cupcake.CupcakeScreen.Flavor.name)
+        }
     }
 }
