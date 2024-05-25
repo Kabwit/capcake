@@ -1,5 +1,5 @@
 package com.example.cupcake
-package com.example.cupcake
+
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,21 +16,5 @@ class MainActivity : ComponentActivity() {
                 CupcakeApp()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CupcakeTheme {
-        Greeting("Android")
     }
 }
